@@ -1,0 +1,8 @@
+2020:03:02 01:25:47.732 WARN  --- [restartedMain] com.example.chapter03.LoggingRunner : warn 로그 메세지 
+2020:03:02 01:25:47.733 ERROR --- [restartedMain] com.example.chapter03.LoggingRunner : error 로그 메세지 
+2020:03:02 01:32:43.253 WARN  --- [restartedMain] com.example.chapter03.LoggingRunner : warn 로그 메세지 
+2020:03:02 01:32:43.255 ERROR --- [restartedMain] com.example.chapter03.LoggingRunner : error 로그 메세지 
+2020:03:02 01:39:58.959 WARN  --- [restartedMain] com.example.chapter03.LoggingRunner : warn 로그 메세지 
+2020:03:02 01:39:58.960 ERROR --- [restartedMain] com.example.chapter03.LoggingRunner : error 로그 메세지 
+2020:03:02 01:40:08.055 WARN  --- [restartedMain] com.example.chapter03.LoggingRunner : warn 로그 메세지 
+2020:03:02 01:40:08.060 ERROR --- [restartedMain] com.example.chapter03.LoggingRunner : error 로그 메세지 

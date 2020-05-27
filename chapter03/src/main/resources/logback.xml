@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration>
+    <appender name = "fileAppender" class = "ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>src/main/resources/logs/board_log.log</file>
+
+        <!-- TimeBasedRollingPolicy => maxHistory(30) 한달 정도 시간이 지나면 기존의 로그 파일을 압축하고 새로운 로그 파일을 생성 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>
+                src/main/resources/logs/myboard.%d{yyyy-MM-dd}.log.gz
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{yyyy:MM:dd HH:mm:ss.SSS} %-5level --- [%thread] %logger{35} : %msg %n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name = "consoleAppender" class = "ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{yyyy:MM:dd HH:mm:ss.SSS} %-5level --- [%thread] %logger{35} : %msg %n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name = "com.example.chapter03" level="warn" additivity="false">
+        <appender-ref ref="consoleAppender"/>
+        <appender-ref ref="fileAppender"/>
+    </logger>
+    <root level="error">
+        <appender-ref ref="consoleAppender"/>
+    </root>
+</configuration>
